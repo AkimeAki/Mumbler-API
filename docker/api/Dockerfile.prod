@@ -1,0 +1,15 @@
+FROM node:18.17.1
+
+WORKDIR /app/
+
+COPY ./package*.json ./
+COPY ./src/ ./src/
+COPY ./tsconfig.json ./
+
+RUN npm install -g npm@9.6.7 && \
+	npm ci --production && \
+	npm run build
+
+EXPOSE 4002
+
+CMD node ./dist/main.js

@@ -1,0 +1,18 @@
+{
+	"env": {
+		"browser": true,
+		"es2023": true
+	},
+	"extends": ["standard-with-typescript", "prettier"],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"project": ["./tsconfig.json"]
+	},
+	"overrides": [
+	],
+	"rules": {
+		"@typescript-eslint/restrict-template-expressions": "off"
+	},
+	"ignorePatterns": ["/tsconfig.json"]
+}
